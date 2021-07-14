@@ -1,0 +1,29 @@
+<nav class="navbar fixed-top px-4 navbar-expand-md navbar-light bg-white absolute-top">
+    <div class="container">
+
+        <button (click)="toggleMenu()" class="navbar-toggler order-2 order-md-1 collapsed" type="button"
+            data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a class="navbar-brand mr-auto order-1 order-md-3" routerLink="/">
+            <div class="row align-items-center">
+                <img src="assets/img/recipes.png" class="mr-2" width="30">
+                Resep
+            </div>
+        </a>
+
+        <div #navbar id="navbar" class="navbar-collapse order-4 order-md-4 collapse">
+            <ul class="navbar-nav ml-auto mr-2">
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active" routerLink="contact">Contact</a>
+                </li>
+            </ul>
+            <form class="form-inline " role="search">
+                <input class="search js-search form-control form-control-rounded mr-sm-2" type="text"
+                    title="Enter search query here.." placeholder="Search.." aria-label="Search">
+            </form>
+        </div>
+    </div>
+</nav>

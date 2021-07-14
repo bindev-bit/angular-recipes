@@ -1,0 +1,46 @@
+<main class="main pt-5 mt-5">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-9">
+                <article class="card mb-4 mx-2">
+                    <img class="card-img" [src]="resep.image_url" alt="">
+                    <div class="card-body">
+                        <div class="row align-items-center">
+                            <h4 class="card-title mb-0 fw-bold">{{ resep.name }}</h4>
+                            <div class="row ml-auto align-items-center">
+                                <p class="card-text mb-0 mr-2">{{ resep.created_at }}</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-clock-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <p class="card-text">{{ resep.author }}</p>
+                        </div>
+                    </div>
+                </article>
+                <div class="p-4 mb-3">
+                    <h4 class="fw-bold">Bahan bahan</h4>
+                    <ul class="list-group list-group-flush mb-5">
+                        <ng-container *ngFor="let bahan of resep.bahan">
+                            <li class="list-group-item">{{ bahan }}</li>
+                        </ng-container>
+                    </ul>
+                    <h4 class="fw-bold">Cara Pembuatan</h4>
+                    <p>{{ resep.cara_pembuatan }}</p>
+                </div>
+
+            </div>
+            <div class="col-md-3 ml-auto">
+
+                <app-sidebar></app-sidebar>
+
+            </div>
+        </div>
+    </div>
+
+</main>

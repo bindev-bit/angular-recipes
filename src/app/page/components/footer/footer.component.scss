@@ -1,0 +1,21 @@
+.footer-content {
+    background: #f2f4f5;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    margin-top: 3rem;
+}
+
+.bg-darkest, a.bg-darkest:focus, a.bg-darkest:hover, button.bg-darkest:focus, button.bg-darkest:hover {
+    background-color: #fedc42 !important;
+}
+
+.site-footer .copy {
+    text-align: center;
+    color: #555d65;
+    text-transform: uppercase;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 90%;
+}

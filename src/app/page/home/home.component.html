@@ -1,0 +1,35 @@
+<main class="main pt-5 mt-5">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-9">
+
+                <div fxLayout="row wrap" fxLayoutGap="grid">
+                    <div fxFlex="50%" fxFlex.xs="100%" fxFlex.sm="50%" *ngFor="let data of listResep">
+                        <article class="card mb-4 mx-2">
+                            <a routerLink="/detail" [queryParams]="{id: data.payload.doc.id}"
+                                class="text-decoration-none text-dark">
+                                <header class="card-header">
+                                    <h4 class="card-title">{{ data.payload.doc.data().name}}</h4>
+                                </header>
+                                <img class="card-img" [src]="data.payload.doc.data().image_url" alt="">
+                                <div class="card-body">
+                                    <p class="card-text">{{ data.payload.doc.data().description }} </p>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-md-3 ml-auto">
+
+                <app-sidebar></app-sidebar>
+
+            </div>
+        </div>
+    </div>
+
+</main>
