@@ -17,9 +17,13 @@ import { AuthModule } from './auth/auth.module';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule,
-    AngularFireAuthModule,
+    /* 
+    We don't need this module, because it says import in PageModul and AuthModule
+    
+      AngularFireModule.initializeApp(environment.firebase),
+      AngularFirestoreModule,
+      AngularFireAuthModule,
+    */
     PageModule,
     AuthModule
   ],
